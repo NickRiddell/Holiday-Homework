@@ -15,7 +15,7 @@
   <%= f.text_field :image %>
   <br>
   <%= f.label :category_id %>
-  <% options = options_from_collection_for_select(@category, 'id', 'title') %>
+  <% options = options_from_collection_for_select(@category, 'id', 'title', @recipe.category.id) %>
   <%= f.select :category_id, options %>
   <br>
 

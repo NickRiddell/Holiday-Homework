@@ -1,7 +1,4 @@
 <% @categories.each do |category| %>
- <%= category.title %>
- <%= link_to("Show #{category.title}", category_path(category)) %>
- <%= button_to('Delete Category', category_path(category), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %>
- <%= link_to('Edit Category', edit_category_path(category)) %>
-  <br>
+ <%= link_to("#{category.title}", category_path(category)) %>
+ <br>
 <% end %>
