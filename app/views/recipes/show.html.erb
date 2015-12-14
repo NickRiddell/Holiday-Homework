@@ -1,0 +1,10 @@
+<h1><%= @recipe.title %></h1>
+<%= @recipe.category.title%>
+<br>
+<%= @recipe.description %>
+<br>
+<%= @recipe.ingredients %>
+<br>
+<%= @recipe.method %>
+<br>
+<%= image_tag(@recipe.image, alt:'No image', width: 200) %>
