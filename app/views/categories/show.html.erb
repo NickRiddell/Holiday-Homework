@@ -7,5 +7,5 @@
   </ul>
 </section>
 <br>
-<%= link_to('Edit Category', edit_category_path(@category)) %><br>
+<%= button_to('Edit Category', edit_category_path(@category), method: :get) %>
 <%= button_to("Delete #{@category.title} ?", category_path(@category), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %>
