@@ -1,6 +1,8 @@
-<%=link_to('New Recipe', new_recipe_path)%>
-<br>
-<% @recipes.each do |recipe| %>
+<h1>Have a look through our ever growing collection</h1>
+<h2><% @recipes.each do |recipe| %>
+<%= link_to( image_tag(recipe.image, alt:'No image', width: 200), recipe_path(recipe)) %><br>
 <%= link_to("#{recipe.title}", recipe_path(recipe)) %><br>
-
-<% end %>
+<small><%= recipe.description %></small><br>
+<% end %></h2>
+<br>
+<center><%=button_to('New Recipe', new_recipe_path, method: :get)%></center>

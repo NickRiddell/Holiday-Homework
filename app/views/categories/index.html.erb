@@ -1,6 +1,7 @@
-<%=link_to('New Category', new_category_path)%>
-<br>
-<% @categories.each do |category| %>
+<%= image_tag("https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg", width: 845) %>
+<h1><% @categories.each do |category| %>
 <%= link_to("#{category.title}", category_path(category)) %>
 <br>
-<% end %>
+<% end %></h1>
+<br>
+<center><%=button_to('New Category', new_category_path, method: :get)%></center>

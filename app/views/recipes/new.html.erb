@@ -6,10 +6,10 @@
   <%= f.text_field :description %>
   <br>
   <%= f.label :ingredients %>
-  <%= f.text_field :ingredients %>
+  <%= f.text_area :ingredients %>
   <br>
   <%= f.label :method %>
-  <%= f.text_field :method %>
+  <%= f.text_area :method %>
   <br>
   <%= f.label :image %>
   <%= f.text_field :image %>
@@ -18,6 +18,5 @@
   <% options = options_from_collection_for_select(@category, 'id', 'title') %>
   <%= f.select :category_id, options %>
   <br>
-
   <%= f.submit 'New recipe!' %>
 <% end %>

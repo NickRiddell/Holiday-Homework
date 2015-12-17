@@ -4,14 +4,14 @@
 <% else %>
 <p>no category</p>
 <% end %>
-<br>
+<br><br>
 <%= @recipe.description %>
-<br>
+<br><br>
 <%= @recipe.ingredients %>
-<br>
+<br><br>
 <%= @recipe.method %>
-<br>
+<br><br>
 <%= image_tag(@recipe.image, alt:'No image', width: 200) %>
-<br>
+<br><br>
 <%= button_to('Edit Recipe', edit_recipe_path(@recipe), method: :get) %>
 <%= button_to("Delete #{@recipe.title} ?", recipe_path(@recipe), method: :delete, data: {confirm: 'Delete recipe? Are you sure?!'}) %>
