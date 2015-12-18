@@ -1,6 +1,6 @@
 <h1>Have a look through our ever growing collection</h1>
-<h2><% @recipes.each do |recipe| %>
-<%= link_to( image_tag(recipe.image, alt:'No image', width: 200), recipe_path(recipe)) %><br>
+<% @recipes.each do |recipe| %>
+<h2><%= link_to( image_tag(recipe.image, alt:'No image', width: 200), recipe_path(recipe)) %><br>
 <%= link_to("#{recipe.title}", recipe_path(recipe)) %><br>
 <small><%= recipe.description %></small><br>
 <% end %></h2>

@@ -1,4 +1,4 @@
-<%= image_tag("https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg", width: 845) %>
+<%= image_tag("https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg", alt:"no image", class: "index")%>
 <h1><% @categories.each do |category| %>
 <%= link_to("#{category.title}", category_path(category)) %>
 <br>
