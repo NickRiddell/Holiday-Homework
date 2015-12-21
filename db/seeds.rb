@@ -7,7 +7,7 @@ mains = Category.create!(title: 'Mains')
 desserts = Category.create!(title: 'Desserts')
 
 Recipe.delete_all
-Recipe.create!(category: lunch, title: "Spicy carrot coriander and red lentil soup", description: "8 portions", ingredients:"1 tbsp coconut oil,
+Recipe.create!(category: lunch, title: "Spicy carrot coriander", sub_title: "with red lentil and chickpea", makes: "8 Servings", cooking_time:"1 hour", description: "8 portions", ingredients:"1 tbsp coconut oil,
 750g bag of carrots - sliced,
 1 courgette - sliced,
 1 large onion - chopped,

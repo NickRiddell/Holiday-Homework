@@ -1,18 +1,33 @@
 <%= form_for @recipe do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, placeholder: "e.g. Ribeye Steak for Two" %>
+  <br>
+  <%= f.label :sub_title %>
+  <%= f.text_field :sub_title, placeholder: "e.g. with mushroom and potato hash" %>
+  <br>
+  <%= f.label :makes %>
+  <%= f.text_field :makes, placeholder: "e.g. 2 Servings"%>
+  <br>
+  <%= f.label :cooking_time %>
+  <%= f.text_field :cooking_time, placeholder: "e.g. 25 to 35 minutes" %>
+  <br>
+  <%= f.label :region %>
+  <%= f.text_field :region, placeholder: "e.g. Baltic" %>
   <br>
   <%= f.label :description %>
-  <%= f.text_field :description %>
+  <%= f.text_field :description, placeholder: "e.g. steak is awesome, especially with mushroom and potato" %>
+  <br>
+  <%= f.label :tags %>
+  <%= f.text_field :tags, placeholder: "Additional searchable terms e.g. barbaque, grill etc"%>
   <br>
   <%= f.label :ingredients %>
-  <%= f.text_area :ingredients %>
+  <%= f.text_area :ingredients, placeholder: "e.g. 1 Ribeye steak, 1 onion" %>
   <br>
   <%= f.label :method %>
-  <%= f.text_area :method %>
+  <%= f.text_area :method, placeholder: "pre-heat oven" %>
   <br>
   <%= f.label :image %>
-  <%= f.text_field :image %>
+  <%= f.text_field :image, placeholder: "image url" %>
   <br>
   <%= f.label :category_id %>
   <% options = options_from_collection_for_select(@category, 'id', 'title') %>

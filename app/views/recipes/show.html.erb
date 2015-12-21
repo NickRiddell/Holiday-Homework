@@ -1,17 +1,17 @@
-<h1><%= @recipe.title %></h1>
+<div><h1><%= @recipe.title %></h1>
 <% if @recipe.category %>
 <%= @recipe.category.title%>
 <% else %>
 <p>no category</p>
 <% end %>
 <br><br>
+<%= image_tag(@recipe.image, alt:'No image', width: 200) %>
+<br><br>
 <%= @recipe.description %>
 <br><br>
 <%= @recipe.ingredients %>
 <br><br>
 <%= @recipe.method %>
-<br><br>
-<%= image_tag(@recipe.image, alt:'No image', width: 200) %>
 <br><br>
 <%= button_to('Edit Recipe', edit_recipe_path(@recipe), method: :get) %>
 <%= button_to("Delete #{@recipe.title} ?", recipe_path(@recipe), method: :delete, data: {confirm: 'Delete recipe? Are you sure?!'}) %>

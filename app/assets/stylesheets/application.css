@@ -65,6 +65,7 @@ nav ul li a:hover {
 
 .main h1 {
   text-align: center;
+  font-family:'Changa One', sans-serif;
 }
 
 .main h1 a{
@@ -79,16 +80,19 @@ nav ul li a:hover {
   border-bottom-color: #bedfd0;
   }
 
-.main h2 {
+.main ul li {
   text-align: center;
+  padding-right: 45px;
+  list-style-type: none;
 }
 
-.main h2 a{
+.main ul li a{
   text-decoration: none;
   color: red;
+  vertical-align: top;
 }
 
-.main h2 img:hover {
+.main ul li a img:hover {
   border: 3px solid red;
 }
 

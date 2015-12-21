@@ -1,10 +1,10 @@
 class RecipesController < ApplicationController
   def index
-    # if params[:search]
-    #   @recipes = Recipe.search(params[:search])
-    # else
+    if params[:search]
+      @recipes = Recipe.search(params[:search])
+    else
       @recipes = Recipe.all
-    # end
+    end
   end
 
   def new
@@ -44,6 +44,6 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:title, :description, :ingredients, :method, :image)
+    params.require(:recipe).permit(:title, :sub_title, :makes, :cooking_time, :region, :tags, :description, :ingredients, :method, :image)
   end  
 end  

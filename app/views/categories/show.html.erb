@@ -2,11 +2,11 @@
 <section>
   <ul>
     <% @category.recipes.each do |recipe| %>
-      <li><%= link_to( image_tag(recipe.image, alt:'No image', width: 200), recipe_path(recipe)) %><br><%= link_to("#{recipe.title}", recipe_path(recipe)) %></li><br>
-    <small><%= recipe.description %></small><br><br>
-    <% end %></h2>
+      <li><%= link_to( image_tag(recipe.image, alt:'No image', width: 200), recipe_path(recipe)) %><br><%= link_to("#{recipe.title}", recipe_path(recipe)) %><br>
+    <small><%= recipe.description %></small></li><br>
+    <% end %>
   </ul>
 </section>
 <br>
-<%= button_to('Edit Category', edit_category_path(@category), method: :get) %>
-<%= button_to("Delete #{@category.title} ?", category_path(@category), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %>
+<center><%= button_to('Edit Category', edit_category_path(@category), method: :get) %>
+<%= button_to("Delete #{@category.title} ?", category_path(@category), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %></center>
