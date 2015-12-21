@@ -9,7 +9,7 @@ body {
 HEADING
 ********************************************/
 header {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.13),0 1px 0 rgba(0,0,0,0.19);
+box-shadow: 0 1px 3px rgba(0,0,0,0.13),0 1px 0 rgba(0,0,0,0.19);
 height: 106px;
 }
 
@@ -63,12 +63,16 @@ nav ul li a:hover {
   border-bottom-color: #bedfd0;
 }
 
-.main h1 {
+/*******************************************
+Main
+********************************************/
+
+.main .category-heading {
   text-align: center;
   font-family:'Changa One', sans-serif;
 }
 
-.main h1 a{
+.main .category-heading a{
   color: red;
   font-size: 20px;
   font-weight: 100;
@@ -76,7 +80,7 @@ nav ul li a:hover {
   border-bottom: 3px solid  #FFFFFF;
 }
 
-.main h1 a:hover {
+.main .category-heading a:hover {
   border-bottom-color: #bedfd0;
   }
 
@@ -100,7 +104,106 @@ nav ul li a:hover {
   width: 100%;
 }
 
+/*******************************************
+Recipe Display
+********************************************/
+.main .section-rec-basics {
+    padding-top: 20px;
+}
 
+.main .container {
+  width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main .holder {
+  margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.main .title-hldr {
+  background-color: #bedfd0;
+  z-index: 2;
+  padding: 12px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .title_area {
+  float: left;
+  width: 66.6%;
+}
+
+.main .main-title {
+  font-size: 33px;
+  color: #fff;
+  margin: 0 0 1px;
+}
+
+.main .sub-title {
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.5em;
+  font-size: 18px;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.main .rec-splash-img-holder {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.rec-splash-img {
+  max-width: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: block;
+}
+
+.main .rec-description-hldr {
+  padding: 20px;
+  background-color: #313567;
+}
+
+.main .rec-description-area {
+  position: relative;
+  width: 370px;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+}
+
+.main .rec-descrip-section {
+  color: #333;
+  padding: 15px;
+  margin-top: 0;
+}
+
+.main .recipe-servings {
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.main .rec-descrip-details-section {
+  margin-top: 20px;
+}
+
+.rec-descrip-section p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

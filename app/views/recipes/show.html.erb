@@ -1,17 +1,45 @@
-<div><h1><%= @recipe.title %></h1>
-<% if @recipe.category %>
-<%= @recipe.category.title%>
-<% else %>
-<p>no category</p>
-<% end %>
+<section class="section-rec-basics">
+<div class="container">
+  <div class="holder rec-basics-hldr">
+    <div class="title-hldr">
+      <div class="title-area">
+      <% if @recipe.category %>
+        <h1 class="main-title"><%= @recipe.title %></h1>
+          <h2 class="sub-title"><%= @recipe.sub_title %></h2>
+      </div>
+    </div>
+  <div class="rec-splash-img-holder">
+    <%= image_tag(@recipe.image, alt:"No image", class: "rec-splash-img") %>
+  </div>
+  <div class="rec-description-hldr">
+    <div class="rec-description-area">
+      <div class="rec-descrip-section">
+      <span>Category:</span>
+      <span><%= @recipe.category.title%>
+      <% else %></span>
+      <p>no category</p>
+      <% end %>
+      <p>
+      <span>Makes:</span>
+      <span><%= @recipe.makes %></span>
+      </p>
+      <p>
+      <span>Cooking Time:</span>
+      <span><%= @recipe.cooking_time %></span>
+      </p>
+        <div class="rec-descrip-details-section">
+          <p><%= @recipe.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <br><br>
-<%= image_tag(@recipe.image, alt:'No image', width: 200) %>
+
+
 <br><br>
-<%= @recipe.description %>
-<br><br>
-<%= @recipe.ingredients %>
-<br><br>
-<%= @recipe.method %>
-<br><br>
+</div>
+</div>
+</section>
 <%= button_to('Edit Recipe', edit_recipe_path(@recipe), method: :get) %>
 <%= button_to("Delete #{@recipe.title} ?", recipe_path(@recipe), method: :delete, data: {confirm: 'Delete recipe? Are you sure?!'}) %>
