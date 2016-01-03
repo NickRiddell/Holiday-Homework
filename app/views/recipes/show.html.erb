@@ -1,3 +1,4 @@
+<section class="section-display-rec">
 <section class="section-rec-basics">
 <div class="container">
   <div class="holder rec-basics-hldr">
@@ -31,15 +32,37 @@
           <p><%= @recipe.description %></p>
         </div>
       </div>
+      <div class="rec-wine-section">
+        <div class="wine-pair-title field-name">
+        <p><%= image_tag("http://www.wineglassesandglassware.co.uk/images/riedel-vinum-shiraz-wine-glass.jpg", class: "wine-glass")%><%= Wine%></p>
+        <p><%= Wine%></p>
+        </div>
+      </div>
     </div>
   </div>
-
-<br><br>
-
-
-<br><br>
 </div>
 </div>
 </section>
+<section class="section-rec-ing-and-meth container" id="ingredients">
+  <div class="holder">
+    <div class="rec-area-title">
+      <h2 class="ingredients" >Ingredients</h2><h2 class="method" >Method</h2>
+    </div>
+    <div class="rec-area-content">
+      <div class="ingredients-list-holder">
+        <div class="ingredients-list">
+          <%= @recipe.ingredients %>
+        </div>
+      </div>
+      <div class="method-holder">
+        <div class="method-list">
+          <%= @recipe.method %>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
 <%= button_to('Edit Recipe', edit_recipe_path(@recipe), method: :get) %>
 <%= button_to("Delete #{@recipe.title} ?", recipe_path(@recipe), method: :delete, data: {confirm: 'Delete recipe? Are you sure?!'}) %>
+</section>

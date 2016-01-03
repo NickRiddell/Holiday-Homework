@@ -1,9 +1,24 @@
-<h1>Have a look through our ever growing collection</h1>
-<section>
-  <ul>
-    <% @recipes.each do |recipe| %>
-      <li><%= link_to( image_tag(recipe.image, alt:'No image', width: 200), recipe_path(recipe)) %><br><%= link_to("#{recipe.title}", recipe_path(recipe)) %><br>
-    <small><%= recipe.makes %></small></li><br>
-<% end %>
-<br>
-<center><%=button_to('New Recipe', new_recipe_path, method: :get)%></center>
+<section id="recipe-items">
+  <div class="container">
+    <div class="headline"><h1>Have a look through our ever growing collection</h1>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane">
+        <div class="row recipe-items-in">
+        <% @recipes.each do |recipe| %>
+          <div class="recipe-thumb">
+            <div class="recipe-img-link">
+            <%= link_to( image_tag(recipe.image, alt:"No image", class: "recipe-img"), recipe_path(recipe)) %>
+            </div>
+            <div class="recipe-title">
+              <h2><%= link_to("#{recipe.title}", recipe_path(recipe)) %></h2>
+              <h6><%= recipe.sub_title %></h6>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <%=button_to('New Recipe', new_recipe_path, method: :get)%>
+  </div>
+</section>

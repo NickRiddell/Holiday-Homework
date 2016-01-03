@@ -66,7 +66,6 @@ nav ul li a:hover {
 /*******************************************
 Main
 ********************************************/
-
 .main .category-heading {
   text-align: center;
   font-family:'Changa One', sans-serif;
@@ -107,6 +106,10 @@ Main
 /*******************************************
 Recipe Display
 ********************************************/
+.main .section-display-rec {
+  background: url(https://civilmaps.com/wp-content/uploads/2015/03/Background-Canvas-1024x682.jpg)
+}
+
 .main .section-rec-basics {
     padding-top: 20px;
 }
@@ -115,6 +118,7 @@ Recipe Display
   width: 940px;
   margin-right: auto;
   margin-left: auto;
+  display: block;
 }
 
 .main .holder {
@@ -122,6 +126,10 @@ Recipe Display
   padding: 0;
   overflow: hidden;
   position: relative;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.06),0 0 0 1px rgba(0,0,0,0.14);
+  background: #fff;
 }
 
 .main .title-hldr {
@@ -132,9 +140,9 @@ Recipe Display
   overflow: hidden;
 }
 
-.main .title_area {
+.main .title-area {
   float: left;
-  width: 66.6%;
+  width: 100%;
 }
 
 .main .main-title {
@@ -199,10 +207,170 @@ Recipe Display
   margin-top: 20px;
 }
 
-.rec-descrip-section p {
-    margin: 0;
-    font-size: 13px;
-    line-height: 20px;
+.main .rec-descrip-section p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.main .rec-wine-section {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #333;
+  padding: 15px;
+  color: #313567;
+  line-height: 12px;
+}
+
+.main .wine-glass {
+  display: inline-block;
+  width: 15px;
+}
+
+.main .rec-area-title {
+  padding: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.main .rec-area-content {
+  background: url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/22/228/228908/d8y1ucsf8z2b3k4vcqrq5id0rr9p0i00ehhqent2jwtqsxuwforyfm3ikkd5dznl-o.jpg?1415208277") top left repeat;
+  min-height: 375px;
+  position: relative;
+  padding: 20px;
+}
+
+.main .ingredients {
+  float: left;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 600;
+  padding-left: 115px;
+}
+
+.main .method {
+  float: right;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 600;
+  padding-right: 140px;
+}
+
+.main .ingredients-list, .main .method-list {
+  color: #333;
+  padding: 15px;
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.main .ingredients-list-holder {
+  position: relative;
+  width: 400px;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  float: left;
+}
+
+.main .method-holder {
+  position: relative;
+  width: 400px;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  float: right;
+}
+
+.main .rec-area-content{
+  padding: 20px;
+  background-color: #313567;
+}
+
+/******************************************Recipe Index******************************************/
+.main #recipe-items {
+  background-color: #fafafc;
+  padding: 30px 30px 0 0;
+  position: relative;
+  display: block;
+}
+
+.main .headline {
+  position: relative;
+  max-width: 970px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family:'Changa One', sans-serif;
+  color: red;
+}
+
+#recipe-items .tab-content {
+  overflow: visible;
+  padding: 30px 0 0 0;
+  position: relative;
+  display: inline-block;
+}
+
+.main .tab-pane {
+  display: inline-block;
+}
+
+.main .recipe-items-in {
+  padding-bottom: 20px;
+}
+
+.main .row, .row-new {
+  margin-left: -1.28205%;
+  margin-right: -1.28205%;
+}
+
+#recipe-items .recipe-thumb {
+  width: 30.76923%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  margin-left: 1.28205%;
+  margin-right: 1.28205%;
+}
+
+#recipe-items .recipe-img-link {
+  display: block;
+  position: relative;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0,0,0,0.25);
+}
+
+#recipe-items .recipe-img {
+  width: 100%;
+  display: block;
+  border: none;
+}
+
+#recipe-items .recipe-title h2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+#recipe-items .recipe-title h2 a {
+text-decoration: none;
+color: red;
+}
+
+#recipe-items .recipe-title h6 {
+  font-size: 14px;
+  color: black;
+  font-style: italic;
+  font-weight: 700;
+  margin: 0;
 }
 
 /*
