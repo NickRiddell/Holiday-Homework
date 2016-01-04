@@ -1,0 +1,11 @@
+<h1><%= @ingredient.title %></h1>
+<section>
+  <ul>
+  <li><%= @ingredient.description %></li>
+  <li><%= @ingredient.image %></li>
+  </ul>
+
+</section>
+<br>
+<center><%= button_to('Edit Ingredient', edit_ingredient_path(@ingredient), method: :get) %>
+<%= button_to("Delete #{@ingredient.title} ?", ingredient_path(@ingredient), method: :delete, data: {confirm: 'Delete them? Are you sure?!'}) %></center>

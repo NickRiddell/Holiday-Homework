@@ -7,22 +7,7 @@ mains = Category.create!(title: 'Mains')
 desserts = Category.create!(title: 'Desserts')
 
 Recipe.delete_all
-Recipe.create!(category: lunch, title: "Spicy carrot coriander", sub_title: "with red lentil and chickpea", makes: "8 Servings", cooking_time:"1 hour", description: "8 portions", ingredients:"1 tbsp coconut oil,
-750g bag of carrots - sliced,
-1 courgette - sliced,
-1 large onion - chopped,
-3 cloves of garlic - crushed,
-3 fresh chillies - diced,
-250g red lentils - rinsed,
-2 400g cans of beans,
-2 sticks celery - sliced,
-250g sweet peppers,
-3 pints veg stock,
-1/4 tsp hot chilli powder,
-1/2 tsp ground cumin,
-3/4 tsp ground coriander,
-large bunch coriander,
-salt and pepper.", method:"Fry onion gently till soft, later adding the garlic and chillies,
+Recipe.create!(category: lunch, title: "Spicy carrot coriander", sub_title: "with red lentil and chickpea", makes: "8 Servings", cooking_time:"1 hour", description: "8 portions", method:"Fry onion gently till soft, later adding the garlic and chillies,
 Add carrots, celery,
 Fry gently till softened, later adding the courgette,
 Add spices and stir fry for a minute or so,

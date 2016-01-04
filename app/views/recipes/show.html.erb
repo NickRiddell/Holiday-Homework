@@ -51,7 +51,9 @@
     <div class="rec-area-content">
       <div class="ingredients-list-holder">
         <div class="ingredients-list">
-          <%= @recipe.ingredients %>
+        <% @recipe.quantities.each do |quantity| %>
+        <%= quantity.amount %> <%= quantity.ingredient.title %>
+        <% end %> 
         </div>
       </div>
       <div class="method-holder">

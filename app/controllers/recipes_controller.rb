@@ -10,6 +10,8 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @category = Category.all
+    @quantities = @recipe.quantities.build
+    @ingredient = @quantities.build_ingredient
   end
 
   def create
@@ -21,11 +23,13 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @quantities = Quantity.where(:recipe_id => params[:id])
   end
 
   def edit
     @recipe = Recipe.find(params[:id])
     @category = Category.all
+    @quantities = @recipe.quantities
   end
 
   def update
@@ -44,6 +48,6 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:title, :sub_title, :makes, :cooking_time, :region, :tags, :description, :ingredients, :method, :image)
+    params.require(:recipe).permit(:title, :sub_title, :makes, :cooking_time, :region, :tags, :description, :method, :image, :category_id, quantities_attributes: [:id,  :ingredient_id, :amount, ingredient_attributes: [:id, :name]])
   end  
 end  

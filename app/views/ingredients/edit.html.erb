@@ -1,0 +1,12 @@
+<%= form_for @ingredient do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, placeholder: "e.g. Carrot" %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description, placeholder: "e.g. pointy and orange" %>
+  <br>
+  <%= f.label :image %>
+  <%= f.text_field :image, placeholder: "image url" %>
+  <br>
+  <%= f.submit 'Edit ingredient!' %>
+<% end %>

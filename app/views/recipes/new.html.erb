@@ -20,8 +20,13 @@
   <%= f.label :tags %>
   <%= f.text_field :tags, placeholder: "Additional searchable terms e.g. barbaque, grill etc"%>
   <br>
-  <%= f.label :ingredients %>
-  <%= f.text_area :ingredients, placeholder: "e.g. 1 Ribeye steak, 1 onion" %>
+  <%= f.fields_for :quantities do |quantity_form| %>
+    <%= quantity_form.label :ingredient_id, 'Ingredient' %>
+    <%= quantity_form.select :ingredient_id, Ingredient.all.collect { |p| [ p.name, p.id ] } %>
+    <br>
+    <%= quantity_form.label :amount, "Amount" %>
+    <%= quantity_form.text_field :amount %>
+    <% end %>
   <br>
   <%= f.label :method %>
   <%= f.text_area :method, placeholder: "pre-heat oven" %>
