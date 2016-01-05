@@ -7,6 +7,11 @@ class QuantitiesController < ApplicationController
     @quantity = Quantity.new
   end
 
+  def create
+    Quantity.create(quantity_params)
+    redirect_to( ingredients_path )
+  end
+
   def show
       load_quantity
     end
