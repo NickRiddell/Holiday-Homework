@@ -4,7 +4,12 @@
   <li><%= @ingredient.description %></li>
   <li><%= @ingredient.image %></li>
   </ul>
+  <% @ingredient.recipes.each do |recipe| %>
+      <%= link_to("#{recipe.title}", recipe_path(recipe)) %><br>
+      <img src="<%= recipe.image%>" width="200px">
+  <br><br>
 
+    <% end %>
 </section>
 <br>
 <center><%= button_to('Edit Ingredient', edit_ingredient_path(@ingredient), method: :get) %>
