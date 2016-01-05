@@ -6,6 +6,7 @@ end
 
 def new
   @ingredient = Ingredient.new
+  @recipe = Recipe.all
 end
 
 def create
@@ -19,6 +20,7 @@ end
 
 def edit
   @ingredient = Ingredient.find(params[:id])
+  @recipe = Recipe.all
 end
 
 def update

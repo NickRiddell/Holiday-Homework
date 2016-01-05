@@ -29,7 +29,7 @@ class QuantitiesController < ApplicationController
 
     private
     def quantity_params
-      params.require(:quantity).permit(:ingredient_id, :recipe_id, :amount, :unit, :preparation)
+      params.require(:quantity).permit(:ingredient_id, :recipe_id, :amount)
     end
     
     def load_quantity
